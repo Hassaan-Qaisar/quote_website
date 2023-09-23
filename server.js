@@ -72,6 +72,11 @@ const server = new ApolloServer({
   })
 // }
 
+app.get("/", (req, res) => {
+  res.send("booom");
+});
+
+
 await server.start();
 server.applyMiddleware({
      app,
