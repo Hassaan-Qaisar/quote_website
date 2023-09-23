@@ -1,0 +1,80 @@
+/* Container for Create Quote */
+.container.my-container {
+  margin-top: 20px;
+  padding: 20px;
+}
+
+/* Error Message */
+.red.card-panel {
+  background-color: #ff6f6f; /* Red background color for error message */
+  color: #fff; /* Text color for error message */
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 20px; /* Adjust margin as needed */
+}
+
+/* Success Message */
+.green.card-panel {
+  background-color: #64dd17; /* Green background color for success message */
+  color: #fff; /* Text color for success message */
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 20px; /* Adjust margin as needed */
+}
+
+/* Create Quote Input */
+form input[type="text"] {
+  width: 100%; /* Take up full width of the container */
+  padding: 10px; /* Adjust padding as needed */
+  border: 1px solid #673ab7; /* Border color for the input field */
+  border-radius: 5px; /* Rounded corners for the input field */
+  font-size: 1rem;
+  margin-bottom: 20px; /* Adjust margin as needed */
+}
+
+.create-button {
+  background-color: #0077b6;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.create-button:hover {
+  background-color: #005f8b;
+}
+
+.loader-container {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  height: 100vh; /* 100% of the viewport height */
+  margin-top: -80px; /* Adjust this value to move it upward */
+}
+
+.loader {
+  width: 48px;
+  height: 48px;
+  background: #fff;
+  border-radius: 50%;
+  position: relative;
+  animation: roll 1s ease-in-out infinite alternate;
+}
+.loader:after{
+  content:"";
+  position: absolute;
+  inset: 5px;
+  border-radius: 50%;
+  border: 5px solid ;
+  border-color: #673ab7 transparent;
+}
+@keyframes roll {
+  0% {
+    transform: translateX(-150%) rotate(0deg) ;
+  }
+  100% {
+    transform:  translateX(150%) rotate(360deg);
+  }
+}

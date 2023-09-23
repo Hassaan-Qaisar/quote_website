@@ -1,0 +1,72 @@
+/* Logo */
+nav img {
+  height: 50px; /* Adjust the height as needed */
+  margin-left: 120px; /* Adjust the left margin as needed */
+  margin-top: 10px; /* Adjust the top margin as needed for vertical alignment */
+}
+
+/* Navbar Container */
+nav {
+  background-color: #673ab7; /* Background color for the navbar */
+}
+
+/* Logo Link */
+.brand-logo {
+  display: flex;
+  align-items: center; /* Vertically align items */
+  font-size: 1.8rem;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Logo Image */
+.logo-img {
+  height: 60px; /* Adjust the height as needed */
+  width: 70px; /* Adjust the height as needed */
+  margin-bottom: -20px;
+  margin-right: 420px; /* Add margin to the right for spacing */
+}
+
+/* Navigation Links */
+#nav-mobile {
+  list-style-type: none;
+  margin: 0;
+  padding: 0 60px;
+  text-align: right; /* Align links to the right */
+}
+
+#nav-mobile li {
+  display: inline;
+  margin-right: 20px; /* Adjust the right margin between links */
+}
+
+#nav-mobile li:last-child {
+  margin-right: 0; /* Remove margin for the last link */
+}
+
+#nav-mobile li a {
+  color: #fff; /* Text color for links */
+  text-decoration: none; /* Remove underlines */
+  font-size: 1.2rem; /* Adjust the font size as needed */
+  transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+#nav-mobile li a:hover {
+  color: #ff6f00; /* Text color for links on hover */
+}
+
+/* Logout Button */
+.logout-button {
+  background-color: #ff6f00; /* Button background color */
+  color: #fff; /* Button text color */
+  border: none; /* Remove button border */
+  padding: 10px 20px; /* Adjust padding as needed */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth hover transition */
+}
+
+.logout-button:hover {
+  background-color: #ff4f00; /* Button background color on hover */
+}

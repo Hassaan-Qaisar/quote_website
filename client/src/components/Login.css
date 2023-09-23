@@ -1,0 +1,93 @@
+.login-container {
+    max-width: 400px;
+    margin-top: 20px;
+    /* margin: 0 auto; */
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .error-message {
+    background-color: #ff6b6b;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  h5 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .input-container {
+    margin-bottom: 15px;
+  }
+  
+  input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .signup-link {
+    font-size: 0.9rem;
+    margin-top: 10px;
+  }
+  
+  .signup-link a {
+    color: #0077b6;
+    text-decoration: none;
+  }
+  
+  .login-button {
+    background-color: #0077b6;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .login-button:hover {
+    background-color: #005f8b;
+  }
+  
+  .loader-container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* 100% of the viewport height */
+    margin-top: -80px; /* Adjust this value to move it upward */
+  }
+  
+  .loader {
+    width: 48px;
+    height: 48px;
+    background: #fff;
+    border-radius: 50%;
+    position: relative;
+    animation: roll 1s ease-in-out infinite alternate;
+  }
+  .loader:after{
+    content:"";
+    position: absolute;
+    inset: 5px;
+    border-radius: 50%;
+    border: 5px solid ;
+    border-color: #673ab7 transparent;
+  }
+  @keyframes roll {
+    0% {
+      transform: translateX(-150%) rotate(0deg) ;
+    }
+    100% {
+      transform:  translateX(150%) rotate(360deg);
+    }
+  }
