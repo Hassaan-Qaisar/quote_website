@@ -11,8 +11,8 @@ import mongoose from "mongoose";
 import dotenv from "dotenv";
 import express from "express";
 import http from "http";
-import path from 'path';
-import { dirname } from 'path';
+import path from "path";
+import { dirname } from "path";
 
 const __dirname = path.resolve();
 
@@ -65,20 +65,23 @@ const server = new ApolloServer({
   ],
 });
 
-if(process.env.NODE_ENV=="production"){
-  app.use(express.static('client/build'))
-  app.get("*",(req,res)=>{
-      res.sendFile(path.resolve(__dirname,'client','build','index.html'))
-  })
-}
+// if(process.env.NODE_ENV=="production"){
+app.use(express.static("client/build"));
+app.get("*", (req, res) => {
+  res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
+});
+// }
+
+// app.get("/", (req, res) => {
+//   res.send("booom");
+// });
 
 await server.start();
 server.applyMiddleware({
-     app,
-     path:'/graphql' 
+  app,
+  path: "/graphql",
 });
 
-httpServer.listen({port},()=>{
+httpServer.listen({ port }, () => {
   console.log(`🚀  Server ready at 4000 ${server.graphqlPath}`);
-})
-
+});
