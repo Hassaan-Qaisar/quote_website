@@ -13,11 +13,13 @@ import express from "express";
 import http from "http";
 import path from "path";
 import { dirname } from "path";
+import cors from "cors";
 
 const __dirname = path.resolve();
 
 const port = process.env.PORT || 4000;
 const app = express();
+app.use(cors());
 const httpServer = http.createServer(app);
 
 mongoose.connect(process.env.MONGO_URI, {
@@ -68,10 +70,16 @@ if(process.env.NODE_ENV=="production"){
   })
 }
 
+console.log(process.env.NODE_ENV)
+
 await server.start();
 server.applyMiddleware({
   app,
   path: "/graphql",
+});
+
+app.get("/check", (req, res) => {
+  res.send("Server is running!");
 });
 
 httpServer.listen({ port }, () => {
